@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Desktop" />
+		<Option pch_mode="2" />
+		<Option compiler="gnu_arm_eabi_gcc_compiler" />
+		<Build>
+			<Target title="NSG">
+				<Option output="../../bin/desktop_nsg.so" prefix_auto="0" extension_auto="0" />
+				<Option object_output="objects/nsg" />
+				<Option type="3" />
+				<Option compiler="gnu_arm_eabi_gcc_compiler" />
+				<Compiler>
+					<Add option="-DNEWSGOLD" />
+				</Compiler>
+			</Target>
+			<Target title="SG">
+				<Option output="../../bin/desktop_sg.so" prefix_auto="0" extension_auto="0" />
+				<Option object_output="objects/sg" />
+				<Option type="1" />
+				<Option compiler="gnu_arm_eabi_gcc_compiler" />
+				<Compiler>
+					<Add option="-DSGOLD" />
+				</Compiler>
+			</Target>
+			<Target title="ELKA">
+				<Option output="../../bin/desktop_el.so" prefix_auto="0" extension_auto="0" />
+				<Option object_output="objects/el" />
+				<Option type="1" />
+				<Option compiler="gnu_arm_eabi_gcc_compiler" />
+				<Compiler>
+					<Add option="-DNEWSGOLD" />
+					<Add option="-DELKA" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-O3" />
+		</Compiler>
+		<Linker>
+			<Add option="-s" />
+			<Add option="-init=_init" />
+			<Add library="gcc" />
+			<Add library="crt_helper" />
+		</Linker>
+		<Unit filename="../../plg.h" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

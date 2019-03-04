@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1349602781 source:c:\ep3\sieelfdev\ep3elf\shell\gui.c
+	<swilib.h>
+	<conf_loader.h>
+	"plg.h"
+
+1349602781 c:\ep3\sieelfdev\ep3elf\shell\plg.h
+
